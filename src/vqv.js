@@ -18,12 +18,13 @@
 
 const vqv = (name, years) => {
   let frase = '';
-  if ( typeof name !== 'string' || typeof years !== 'number') {
+  if (typeof name !== 'string' || typeof years !== 'number') {
     frase = undefined;
     return frase;
   }
-  frase = `Oi, meu nome é ${name}!\nTenho ${years} anos,\ntrabalho na Trybe e mando muito em programação!\n#VQV!`;
-  return frase;
+  // eslint-disable-next-line max-len
+  frase = `Oi, meu nome é ${name}!\nTenho ${years} anos,\n`;
+  return `${frase}trabalho na Trybe e mando muito em programação!\n#VQV!`;
 };
 
 module.exports = vqv;
