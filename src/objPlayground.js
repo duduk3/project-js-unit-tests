@@ -56,6 +56,4 @@ const arrayGenerator = (type, object) => {
   return operatorKey; 
 };
 
-console.log(arrayGenerator('entries', { sum: 4, mult: 3, div: 0, sub: -2 }));
-
 module.exports = { calculator, arrayGenerator };
