@@ -33,8 +33,21 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => {
+  // eslint-disable-next-line no-undef
+  // eslint-disable-next-line sonarjs/prefer-object-literal
+  const operators = { };
+  operators.sum = number1 + number2;
+  operators.mult = number1 * number2;
+  operators.div = Math.trunc(number1 / number2);
+  operators.sub = number1 - number2;
+  return operators;
+};
 
-const arrayGenerator = (type, object) => {};
+console.log(calculator(-10, 5));
+
+const arrayGenerator = (type, object) => {
+
+};
 
 module.exports = { calculator, arrayGenerator };
