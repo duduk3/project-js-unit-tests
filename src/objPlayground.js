@@ -42,10 +42,20 @@ const calculator = (number1, number2) => {
   return operators;
 };
 
-console.log(calculator(5, 5));
-
 const arrayGenerator = (type, object) => {
-
+  const operatorKey = [];
+  for (let i = 0; i < Object.keys(object).length; i += 1) {
+    if (type === 'keys') {
+      operatorKey.push(Object.keys(object)[i]);
+    } else if (type === 'values') {
+        operatorKey.push(Object.values(object)[i]);
+    } else if (type === 'entries') {
+        operatorKey.push(Object.entries(object)[i]);
+    }
+  }
+  return operatorKey; 
 };
+
+console.log(arrayGenerator('entries', { sum: 4, mult: 3, div: 0, sub: -2 }));
 
 module.exports = { calculator, arrayGenerator };
