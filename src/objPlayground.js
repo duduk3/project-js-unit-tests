@@ -34,17 +34,15 @@
 */
 
 const calculator = (number1, number2) => {
-  // eslint-disable-next-line no-undef
-  // eslint-disable-next-line sonarjs/prefer-object-literal
-  const operators = { };
-  operators.sum = number1 + number2;
-  operators.mult = number1 * number2;
-  operators.div = Math.trunc(number1 / number2);
-  operators.sub = number1 - number2;
+  const sum = number1 + number2;
+  const mult = number1 * number2;
+  const div = Math.trunc(number1 / number2);
+  const sub = number1 - number2;
+  const operators = { sum, mult, div, sub };
   return operators;
 };
 
-console.log(calculator(-10, 5));
+console.log(calculator(5, 5));
 
 const arrayGenerator = (type, object) => {
 
