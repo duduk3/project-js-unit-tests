@@ -41,5 +41,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     expect(productDetails('alcool', 'detergente')[0]).not.toStrictEqual(productDetails('alcool', 'detergente')[1]);
     // Teste se os dois productIds terminam com 123.
+    expect(productDetails('alcool', 'detergente')[0].details.productId).toBe('alcool123');
+    expect(productDetails('alcool', 'detergente')[1].details.productId).toBe('detergente123');
   });
 });
