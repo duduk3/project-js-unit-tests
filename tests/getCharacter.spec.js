@@ -71,5 +71,6 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
       expect(getCharacter('Melissandre')).toStrictEqual(getCharacter('melissandre'));
       expect(getCharacter('melissandre')).toStrictEqual(getCharacter('MELISSANDRE'));
         // Teste se ao passar um nome que não está na tabela, a função retorna undefined.
-  });
+      expect(getCharacter('xablau')).toBeUndefined();
+      });
 });
